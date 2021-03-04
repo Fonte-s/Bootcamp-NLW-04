@@ -3,7 +3,7 @@ import { ChallengesContext } from '../contexts/ChallengesContexts';
 import styles from '../styles/components/ChallengeBox.module.css';
 
 export function ChallengeBox() {
-    const { activeChallenge, resetChallenge } = useContext(ChallengesContext)
+    const { activeChallenge, resetChallenge, completeChallenge } = useContext(ChallengesContext)
 
 
 
@@ -30,7 +30,8 @@ export function ChallengeBox() {
 
                         <button
                             className={styles.challengeSucceededButton}
-                            type="button">
+                            type="button"
+                            onClick={completeChallenge}>
                             Completei
                              </button>
                     </footer>
